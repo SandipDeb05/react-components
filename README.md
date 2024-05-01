@@ -16,17 +16,12 @@ This project is a React.js application designed to transform a given flattened a
    - Double-clicking on a folder navigates to the next screen displaying its contents (subfolders and files).
    - Breadcrumb navigation tracks the user's path and allows navigation back to previous screens.
 
-3. **Sorting**:
-
-   - Files and folders can be sorted based on title in ascending or descending order.
-   - Sorting based on date & time is also available.
-
-4. **UI/UX**:
+3. **UI/UX**:
 
    - Designed intuitive and visually appealing interface for file/folder view.
    - React.js components are effectively used to organize and manage UI elements.
 
-5. **Functionality**:
+4. **Functionality**:
    - Double-click functionality implemented to navigate into folders.
    - Leaf nodes (files without children) are displayed properly.
    - Proper handling of edge cases such as empty arrays or invalid data structures.
@@ -35,3 +30,4 @@ This project is a React.js application designed to transform a given flattened a
 
 - Files and folders can be sorted based on title in ascending or descending order.
 - Sorting based on date & time is also available.
+- Implemented a back button to allow users to navigate back to the previous screen.
