@@ -46,6 +46,7 @@ const FileExplorer = ({ folderStructure }) => {
         {breadcrumbValue.map((val, index) => {
           return (
             <Typography
+              style={{ cursor: "pointer" }}
               color={
                 index === breadcrumbValue.length - 1
                   ? "#1976d2"

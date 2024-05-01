@@ -9,6 +9,7 @@ import {
   Paper,
   IconButton,
   TableSortLabel,
+  Tooltip,
 } from "@mui/material";
 import FolderIcon from "@mui/icons-material/Folder";
 import FolderOpenIcon from "@mui/icons-material/FolderOpen";
@@ -67,7 +68,7 @@ const FileExplorerTable = ({ items, setBreadcrumbValue }) => {
               sx={{
                 borderRight: "1px solid #fff",
                 fontWeight: 600,
-                color: "#444",
+                color: "#222",
                 fontSize: "1rem",
                 width: "200px",
                 backgroundColor: "#7fbfff",
@@ -90,7 +91,7 @@ const FileExplorerTable = ({ items, setBreadcrumbValue }) => {
               sx={{
                 borderRight: "1px solid #fff",
                 fontWeight: 600,
-                color: "#444",
+                color: "#222",
                 fontSize: "1rem",
                 width: "200px",
                 backgroundColor: "#7fbfff",
@@ -112,7 +113,7 @@ const FileExplorerTable = ({ items, setBreadcrumbValue }) => {
               align="left"
               sx={{
                 fontWeight: 600,
-                color: "#444",
+                color: "#222",
                 fontSize: "1rem",
                 backgroundColor: "#7fbfff",
               }}
@@ -139,14 +140,16 @@ const FileExplorerTable = ({ items, setBreadcrumbValue }) => {
                 onDoubleClick={() => updateBreadcrumb(item)}
                 sx={{ cursor: "pointer" }}
               >
-                <IconButton>
-                  {item.children.length > 0 ? (
-                    <FolderIcon color="primary" />
-                  ) : (
-                    <FolderOpenIcon color="primary" />
-                  )}
-                </IconButton>
-                {item.title || "N/A"}
+                <Tooltip title="Double-click to open the folder" arrow>
+                  <IconButton>
+                    {item.children.length > 0 ? (
+                      <FolderIcon color="primary" />
+                    ) : (
+                      <FolderOpenIcon color="primary" />
+                    )}
+                  </IconButton>
+                  {item.title || "N/A"}
+                </Tooltip>
               </TableCell>
               <TableCell align="left">
                 {getFormattedTime(item.created_on)}
