@@ -26,7 +26,7 @@ This project is a React.js application designed to transform a given flattened a
    - Leaf nodes (files without children) are displayed properly.
    - Proper handling of edge cases such as empty arrays or invalid data structures.
 
-## Optional Features
+## Additional Features
 
 - Files and folders can be sorted based on title in ascending or descending order.
 - Sorting based on date & time is also available.
