@@ -99,7 +99,7 @@ const FileExplorerTable = ({ items, setBreadcrumbValue }) => {
             >
               <TableSortLabel
                 disabled={sortedItems.length < 1}
-                active={orderBy === "asc"}
+                active={orderBy === "dateAndTime"}
                 direction={order}
                 onClick={(e) => handleRequestSort(e, "dateAndTime")}
               >
